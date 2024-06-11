@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 20px;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    button {
+        width: 60px;
+        height: 30px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 4px;
+    }
+
+    .btn-estilo {
+        display: flex;
+        align-items: center;
+        justify-content: center ;
+    }
+
+    hr {
+        margin-bottom: -12px;
+        margin-top: -12px;
+    }
+
+    #comeco{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    p{
+        font-size: 20px;
+        font-weight: 600;
+    }
+</style>
+
+<body>
+    <div id="comeco">
+        <h1 class="clicou"> Aula de computaria </h1>
+        <h1 class="clicou">Dia 11/06</h1>
+    </div>
+    <hr>
+    <div class="btn-estilo">
+        <button class="btn-1" onclick="mudarDeCor('blue')" onmouseenter="entrar()" onmouseout="sair">Azul</button>
+        <button class="btn-2" onclick="mudarDeCor('green')" onmouseenter="entrar()">Verde</button>
+        <button class="btn-3" onclick="mudarDeCor('yellow')" onmouseenter="entrar()">Amarelo</button>
+        <button class="btn-4" onclick="mudarDeCor('gray')" onmouseenter="entrar()">Cinza</button>
+        <button class="btn-5" onclick="mudarDeCor('orange')" onmouseenter="entrar()">Laranja</button>
+        <button class="btn-6" onclick="mudarDeCor('pink')" onmouseenter="entrar()">Rosa</button>
+        <button class="btn-7" onclick="mudarDeCor('red')" onmouseenter="entrar()">Vermelho</button>
+        <button class="btn-8" onclick="mudarDeCor('black')" onmouseenter="entrar()">reset</button>
+    </div>
+    <hr>
+    <div id="text">
+        <p>Treinando</p>
+        <p>java</p>
+        <p>script</p>
+        <p>Programaçao</p>
+    </div>
+
+
+    <script>
+        var p = window.document.getElementsByTagName("p")[2]
+
+        window.document.write("Está escrito: ", p.innerText)
+
+        p.style.color = 'blue'
+
+        var corpo = window.document.body
+        corpo.style.background = "green"
+
+        var d = window.document.getElementById('text')
+        d.style.background = 'red'
+
+        var o = window.document.getElementById('comeco')
+        o.style.background = 'purple'
+
+        const clicou = document.querySelector('.clicou');
+        function mudarDeCor(color) {
+            clicou.style.color = color;
+
+        }
+    
+    </script>
+</body>
+
+</html>
